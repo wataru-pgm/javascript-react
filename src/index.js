@@ -72,3 +72,30 @@ const func2 = (str) => {
     return str;
 }
 console.log(func2("func2です"));
+
+
+/**
+ * 分割代入
+ */
+
+const myProfile = {
+    name: "wataru",
+    age: 31
+};
+const message1 = `名前は${myProfile.name}です。年齢は${myProfile}歳です。`;
+console.log(message1);
+
+//上記のように書くとコードが長くなって複雑化してしまう。
+//そこで下記の分割代入{}を使用することでコードをよりシンプルにすることができる。
+
+const {name, age} = myProfile;
+const message2 = `名前は${name}です。年齢は${age}歳です。`;
+console.log(message1);
+
+const myProfile = ['wataru', 31];
+const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}`;
+console.log(message3);
+
+const [name, age] = myProfile;
+const message4 = `名前は${name}です。年齢は${age}歳です。`;
+console.log(message4);
