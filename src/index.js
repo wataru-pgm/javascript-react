@@ -200,3 +200,17 @@ console.log(arr4);
 
 //スプレッド構文は上記の上書きを防ぐことができる。
 
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+
+const arr6 = [...arr4];
+arr6[0] = 100;
+console.log(arr6);
+
+//コンソール
+//[100, 20]
+
+console.log(arr4);
+
+//コンソール
+//[10, 20]
