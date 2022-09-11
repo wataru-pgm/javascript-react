@@ -278,3 +278,33 @@ console.log(newNameArr);
 
 //コンソール
 //["田中さん", "山田さん", "hoge"]
+
+/**
+ * 三項演算子
+ */
+//ある条件 ? 条件がtrueの時 : 条件がfalseの時
+
+const val1 = 1 > 0 ? 'trueです'　：　'falseです';
+console.log(val1);
+
+//コンソール
+//trueです
+
+
+const num = 1300;
+cosole.log(num.toLocaleString());
+
+//コンソール
+//1,300
+
+const formattedNum = typeof num === 'number' ? num.toLocaleString() : '数値を入力してください';
+console.log(formattedNum);
+
+
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? '100を超えています' : '許容範囲ないです'; 
+}
+console.log(checkSum(50, 60));
+
+//コンソール
+//100を超えています
