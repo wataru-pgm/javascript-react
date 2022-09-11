@@ -214,3 +214,67 @@ console.log(arr4);
 
 //コンソール
 //[10, 20]
+
+/**
+ * mapやfileterを使った配列の処理
+ */
+
+//mapについて
+//従来の書き方
+const nameArr = ["田中", "山田", "hoge"];
+for (let index = 0; index < nameArr.length; index++) {
+  console.log(`${index　＋　1}番目は${nameArr[index]}です`);
+}
+
+//コンソール
+//1番目は田中です
+//2番目は山田です
+//3番目はhogeです
+//と順番位表示される
+
+
+
+//mapを使うとよりシンプルに書くことができる
+nameArr.map((name, index)=>console.log(`${index　+ 1}番目は${name}です`));
+
+//コンソール
+//1番目は田中です
+//2番目は山田です
+//3番目はhogeです
+
+//mapを使った書き方 挙動の確認
+const nameArr2 = nameArr.map((name)=>{
+  return name;
+}) 
+console.log(nameArr2);
+
+//コンソール
+//["田中", "山田", "hoge"]
+
+
+//filterについて
+//ある条件に一致するものだけを取り出したいときに使用する
+
+const numArr = [1, 2, 3, 4, 5];
+const newNumArr = numArr.filter((num) => {
+  return num % 2 === 1; //要素をそれぞれ2で割って余りが1になるもののみ
+})
+console.log(newNumArr);
+
+//コンソール
+//[1, 3, 5]
+
+//実践練習
+//hoge以外には「さん」をつけるようにする
+
+const newNameArr = nameArr.map(() => {
+  if (name === "hoge") {
+    return name
+  } else {
+    return `${name}さん`
+  }
+})
+console.log(newNameArr);
+
+//コンソール
+//["田中さん", "山田さん", "hoge"]
