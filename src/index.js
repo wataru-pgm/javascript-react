@@ -308,3 +308,39 @@ console.log(checkSum(50, 60));
 
 //コンソール
 //100を超えています
+
+/**
+ * 論理演算子の本当の意味について　　　　　&& とか ||
+ */
+
+const flag1 = true;
+const flag2 = false;
+
+if (flag1 || flag2) {
+  console.log("1か2はtrueになります")
+}
+
+	if (flag1 && flag2) {
+  console.log("1と2もtrueになります")
+}
+
+
+
+// || は左側がfalseなら右を返す
+const num = null;
+const fee = num || "金額未設定です";
+
+console.log(fee);
+
+//コンソール
+//金額が未設定です
+
+
+// && は左側がtrueなら右側を返す
+const num2 = 100;
+const fee2 = num2 && "何か設定されました"
+
+console.log(fee2)
+
+//コンソール
+//何か設定されました
